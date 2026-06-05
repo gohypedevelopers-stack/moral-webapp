@@ -56,32 +56,65 @@ function applyMobileScrollFix(doc: Document) {
 
     @media (max-width: 900px) {
       .hero {
-        min-height: 140dvh !important;
+        min-height: 132dvh !important;
+        background: #000 !important;
       }
 
       .hero__sticky {
-        min-height: 70dvh !important;
-        height: 70dvh !important;
+        min-height: 54dvh !important;
+        height: 54dvh !important;
+        background: #000 !important;
       }
 
       .hero__sticky {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        overflow: hidden !important;
+      }
+
+      .hero__video {
+        width: 100% !important;
+        height: 100% !important;
+        background: #000 !important;
       }
 
       .crest {
-        top: 42% !important;
-        transform: translate(-50%, -42%) scale(0.78) !important;
+        top: 37% !important;
+        transform: translate(-50%, -37%) scale(0.64) !important;
       }
 
       .hero__tag {
         top: auto !important;
-        bottom: 4.25rem !important;
+        bottom: 1.9rem !important;
+        transform: none !important;
       }
 
       .hero__scroll {
-        bottom: 0.75rem !important;
+        bottom: 0.25rem !important;
+      }
+
+      .split__grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .split__left {
+        min-height: 34dvh !important;
+        max-height: 34dvh !important;
+      }
+
+      .glyphfield,
+      .split__mark {
+        transform: scale(0.78) !important;
+        transform-origin: center !important;
+      }
+
+      .split__right {
+        padding-top: 1.25rem !important;
+      }
+
+      .split__block {
+        margin-top: 0 !important;
       }
 
       img,
@@ -220,15 +253,18 @@ export function HomeExperienceFrame() {
 
   useEffect(() => {
     const scheduleLoad = () => setShouldLoad(true);
+    const browserWindow = globalThis.window;
 
-    if ("requestIdleCallback" in window) {
-      const idleId = window.requestIdleCallback(scheduleLoad, { timeout: 300 });
+    if (typeof browserWindow.requestIdleCallback === "function") {
+      const idleId = browserWindow.requestIdleCallback(scheduleLoad, {
+        timeout: 300,
+      });
 
-      return () => window.cancelIdleCallback(idleId);
+      return () => browserWindow.cancelIdleCallback(idleId);
     }
 
-    const timeoutId = window.setTimeout(scheduleLoad, 32);
-    return () => window.clearTimeout(timeoutId);
+    const timeoutId = globalThis.setTimeout(scheduleLoad, 32);
+    return () => globalThis.clearTimeout(timeoutId);
   }, []);
 
   const patchLinks = useCallback(
