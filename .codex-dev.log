@@ -8,3 +8,24 @@
 
  ✓ Starting...
  ✓ Ready in 1520ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1880ms (611 modules)
+ GET / 200 in 2346ms
+ ✓ Compiled in 19ms
+ ✓ Compiled in 173ms (240 modules)
+ ✓ Compiled in 134ms (226 modules)
+ ✓ Compiled in 77ms (240 modules)
+ ⨯ ./components/SiteHeader.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from D:\Moral\components\SiteHeader.tsx
+    1: The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./components/SiteHeader.tsx
+ ✓ Compiled in 101ms (226 modules)
+ ✓ Compiled in 73ms (240 modules)
+ ✓ Compiled in 109ms (226 modules)
+ ✓ Compiled in 75ms (240 modules)
+ ✓ Compiled in 235ms (240 modules)
