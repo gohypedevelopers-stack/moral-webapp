@@ -117,6 +117,23 @@ function applyMobileScrollFix(doc: Document) {
         margin-top: 0 !important;
       }
 
+      .values {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 0.75rem !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        white-space: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+
+      .values span {
+        flex: 0 0 auto !important;
+      }
+
       img,
       video,
       image-slot,
