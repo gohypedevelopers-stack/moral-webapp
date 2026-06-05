@@ -4,18 +4,25 @@ export default function Loading() {
       style={{
         minHeight: "100dvh",
         backgroundColor: "#0a0a0a",
+        display: "grid",
+        placeItems: "center",
+        padding: "24px",
       }}
     >
-      <img
-        src="/loader.jpeg"
-        alt="Loading MORAL"
-        style={{
-          width: "100%",
-          height: "100dvh",
-          objectFit: "cover",
-          display: "block",
-        }}
-      />
+      <picture style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <img
+          src="/loader.jpeg"
+          alt="Loading MORAL"
+          style={{
+            width: "min(100%, 420px)",
+            height: "auto",
+            maxHeight: "70dvh",
+            objectFit: "cover",
+            display: "block",
+            borderRadius: "20px",
+          }}
+        />
+      </picture>
     </main>
   );
 }
