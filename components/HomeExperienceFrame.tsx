@@ -119,15 +119,13 @@ function applyMobileScrollFix(doc: Document) {
 
       .values {
         display: flex !important;
-        flex-direction: row !important;
+        flex-direction: column !important;
         flex-wrap: nowrap !important;
-        gap: 0.75rem !important;
-        align-items: center !important;
+        gap: 0.6rem !important;
+        align-items: flex-start !important;
         justify-content: flex-start !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        white-space: nowrap !important;
-        -webkit-overflow-scrolling: touch !important;
+        overflow: visible !important;
+        white-space: normal !important;
       }
 
       .values span {
