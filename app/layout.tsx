@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { AppShell } from "@/components/AppShell";
 
 export const metadata: Metadata = {
   title: "MORAL - Wear Your Values",
-  description: "Next.js wrapper for the original MORAL bundled experience.",
+  description: "Editorial Next.js storefront for MORAL.",
 };
 
 export default function RootLayout({
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <AppShell>{children}</AppShell>
+      </body>
     </html>
   );
 }

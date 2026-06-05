@@ -1,0 +1,11 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0a0a0a"/>
+  <g fill="none" stroke="#efece4" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity="0.92">
+    <path d="M455 470 L455 330 L600 430 L745 330 L745 470"/>
+  </g>
+  <g stroke="#efece4" stroke-width="9" stroke-linecap="round" opacity="0.6">
+    <path d="M450 360 L300 300 M450 388 L320 348 M450 416 L340 392"/>
+    <path d="M750 360 L900 300 M750 388 L880 348 M750 416 L860 392"/>
+  </g>
+  <text x="600" y="610" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="500" font-size="96" letter-spacing="16" fill="#efece4">MORAL</text>
+</svg>
